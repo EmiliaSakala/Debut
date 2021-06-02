@@ -1,0 +1,129 @@
+
+header{
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0 100px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 4;
+    
+}
+
+
+
+header nav{
+  float: right;
+  background-color:#b94700c9;
+ 
+}
+
+
+header nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li{
+    list-style: none;
+}
+
+header nav ul li a {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-toggle{
+    color: black;
+    float: right;
+    display: none;
+    cursor: pointer;
+    
+}
+
+
+header .menu-toggle .icon button{
+    font-size: 18px;
+    color: #B94700;
+    height: 100px;
+    width: 100px;
+    border: #E8DFCE;
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    outline: none;
+    z-index: 5;
+    font-family: 'regular';
+    background-color: #E8DFCE;
+}
+
+
+
+@media(min-width:320px){
+    header{
+        padding: 0 20px;
+    }
+   
+   
+    .menu-toggle{
+        display: block;
+        z-index: -1;
+    }
+
+    header nav{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        z-index: 2;
+        left: -100%;
+        transition: 0.5s;
+       
+    }
+
+    header nav.active{
+        left: 0;
+    }
+
+    header nav ul{display: block;
+    text-align: center;}
+
+    header nav ul li a{
+        color: #E8DFCE;
+    }
+}
+
+
+@media(min-width:992px){
+    header nav ul li a{
+        font-size: 22px;
+        font-family: 'regular';
+        margin: 60px 0;
+    }
+
+    
+}
+
+@media(min-width:1200px){
+    
+  header .menu-toggle .icon button{
+    font-size: 22px;
+    color: #B94700;
+    height: 202px;
+    width: 202px;
+    border: #E8DFCE;
+    position: absolute;
+    top: 0px;
+    right: 80px;
+  }
+
+   header .menu-toggle .icon{
+       right:112px
+   }
+
+  
+}
